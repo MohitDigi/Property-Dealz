@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Select, Slider, Button, Input, Checkbox } from "antd";
 import Logo from "../images/Logo.svg";
+import { Link } from "react-router-dom";
 const { Search } = Input;
 
 const Navbar = () => {
@@ -9,11 +10,17 @@ const Navbar = () => {
       {/* Navbar start */}
       <Row className="navbar-container" justify="space-around">
         {/* Left section contain the logo of the site */}
-        <Col span={12} className="left-navbar-section ">
+        <Col span={3} className="left-navbar-section ">
           <img src={Logo} alt="logo" />
         </Col>
+        <Col span={2} >
+          <Row align="middle" gutter={24}>
+            <Link to="/"><h2>Home</h2></Link>
+            <Link to="/About"><h2>About</h2></Link>
+          </Row>
+        </Col>
         {/* Right section contain searchbox, filter option like price and no. of bedroom */}
-        <Col span={12} className="right-navbar-section">
+        <Col span={18} className="right-navbar-section">
           <Row gutter={24} align="middle" justify="end">
             <Col span={12}>
               {/* Search box component instead of input to reduce the code*/}
@@ -58,7 +65,7 @@ const Navbar = () => {
               />
             </Col>
             {/* No. of bedroom filter */}
-            <Col >
+            <Col>
               <Select
                 placeholder="3 Bedrooms"
                 size="large"
