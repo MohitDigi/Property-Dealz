@@ -1,9 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
-
 import SortItem from "./SortItem";
 import Map from "./Map";
-import { Col, Divider, Row } from "antd";
+import { Col, Row } from "antd";
 import CardItem from "./CardItem";
 
 const location = {
